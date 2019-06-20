@@ -21,6 +21,7 @@ except ImportError:
 
 from tslearn.utils import to_time_series_dataset
 from tslearn.utils import load_arff, remake_files, load_multivariate_x, save_timeseries_txt
+
 __author__ = 'Romain Tavenard romain.tavenard[at]univ-rennes2.fr'
 
 
