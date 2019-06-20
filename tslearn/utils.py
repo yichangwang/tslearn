@@ -2,6 +2,7 @@
 The :mod:`tslearn.utils` module includes various utilities.
 """
 
+import os
 import numpy
 import os
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -574,7 +575,6 @@ def to_txt(content):
 
 def remake_files(dataset_full_path):
     folder_all = os.listdir(dataset_full_path)
-
     dataset_name = dataset_full_path.split('/')[-1]
     folder = os.path.join(dataset_full_path, dataset_name)
     files = [folder + '_TEST.arff', folder + '_TRAIN.arff']
@@ -604,3 +604,4 @@ def load_multivariate_x(f_name):
         # reshpe to (nb_example, length, channels)
         xx = temp.transpose(0, 2, 1)
     return xx
+
